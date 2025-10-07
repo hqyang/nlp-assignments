@@ -2,13 +2,12 @@
 # @Author: Haiqin Yang
 # @Date:   2025-10-07 16:51:32
 # @Last Modified by:   Haiqin Yang
-# @Last Modified time: 2025-10-07 17:02:25
+# @Last Modified time: 2025-10-07 22:37:26
 import nltk
 import jieba
 import contractions
 import re
 from pathlib import Path  # 确保已导入
-
 
 def detect_language(text):
     '''

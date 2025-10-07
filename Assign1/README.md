@@ -52,13 +52,16 @@ nlp-assignments/
 │   ├── 24264-0.txt
 │   ├── 8001.txt
 │   ├── 7337-0.txt
-│   ├── 8001-p.txt
-│   └── 7337-0-p.txt   # 注意：你这里重复了7337-0.txt，我改成了一个示例的处理后文本
+│   ├── 8001-p.txt          # 提供的处理后的示例文本
+│   └── 7337-0-p.txt        # 提供的处理后的示例文本
 └── Assign1/
-├──---- README.md       # 作业说明
-    ├── Assign1.py
-    ├── sample.json
-    └── sample_out.md
+    ├── README.md           # 作业说明
+    ├── Assign1.py          # 不能改变此文件代码
+    ├── Assign1_func.py     # 实现pass对应部分代码
+    ├── requirements.txt    # 需要的安装包
+    ├── sample.json         # 示例配置文件
+    ├── sample_out.md       # 示例输出结果
+    └── util.py             # 无需更改此代码 (被Assign1.py或Assign1_func.py调用)
 ```
 
 你可以用下面的命令生成作业环境并安装需要的包
@@ -86,8 +89,18 @@ python Assign1-1.py sample.json  > sample_out.md
 
 ## 四、提交代码说明
 请将你的作业压缩成SID-Assign1.zip, 其中SID是你的学号(此目的是方便老师用自动脚本评分)。解压后文件内容如下: 
+```
 SID-Assign1/
-|__ Assign1-1.py        # 主程序 (需完成pass的代码实现)
+├── Assign1.py          # 原文件
+├── Assign1_func.py     # 实现后的代码
+├── out.md              # 运行Assign1.py得出的结果
+└── util.py             # 原文件
+````
+Tools:
+
+- prepare_submit.py can help to create(1) or check(2) the to-be-submitted zip file. It will throw assertion errors if the format is not expected, and we will not accept submissions that fail this check. Usage: 
+  - (1) To create and check a zip file with your outputs, run python prepare_submit.py path/to/your/output/dir SID, 
+  - (2) To check your zip file, run python prepare_submit.py path/to/your/submit/zip/SID-Assign1.zip SID
 
 # 评分标准
 |  内容 | 得分 |
@@ -95,3 +108,4 @@ SID-Assign1/
 | 完全正确 | 100 |
 | 正确完成normalize_doc的每个预处理步骤的调用 | 每个5分 (共35分 ) |
 | 正确完成所有预处理步骤的函数 | 每个5分(共35分) |
+| 每个文件的输出  | 每个10分 (共30分) |
