@@ -1,0 +1,32 @@
+{
+    "booklist": [
+        ["Book01_Genesis", "./data/8001.txt"],
+        ["Lau-zi dao de jing", "./data/7337-0.txt"]
+    ],    
+    "preprocessing_params": [
+    ["Book01_Genesis", {
+        "html_stripping": true,
+        "contraction_expansion": true,
+        "accented_char_removal": true,
+        "text_lower_case": true,
+        "text_lemmatization": true,
+        "special_char_removal": true,
+        "stopword_removal": true,
+        "remove_digits": true,
+        "zh_simplification": false,
+        "isDebug": false
+    }],
+    ["Lau-zi dao de jing", {
+        "html_stripping": true,
+        "contraction_expansion": false,
+        "accented_char_removal": false,
+        "text_lower_case": false,
+        "text_lemmatization": false,
+        "special_char_removal": true,
+        "stopword_removal": true,
+        "remove_digits": true,
+        "zh_simplification": true,
+        "isDebug": false
+    }]
+    ]
+}

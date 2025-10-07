@@ -1,0 +1,7 @@
+nltk>=3.8               # 自然语言工具包
+requests>=2.31.0        # 网络请求
+beautifulsoup4>=4.12.0  # HTML解析库
+contractions>=0.1.0     # 扩展英语缩略词
+opencc>=1.1.0           # 中文简繁转换  
+jieba>=0.42.0           # 中文分词
+tqdm>=4.65.0            # 进度条显示
