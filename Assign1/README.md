@@ -46,7 +46,6 @@
 当前文件夹目录如下: 
 ```
 nlp-assignments/
-├── Assign1-1.md
 ├── data/
 │   ├── 1342-0.txt
 │   ├── 23950-0.txt
@@ -56,15 +55,17 @@ nlp-assignments/
 │   ├── 8001-p.txt
 │   └── 7337-0-p.txt   # 注意：你这里重复了7337-0.txt，我改成了一个示例的处理后文本
 └── Assign1/
-    ├── Assign1-1.py
+├──---- README.md       # 作业说明
+    ├── Assign1.py
     ├── sample.json
     └── sample_out.md
 ```
 
-你可以用下面的命令生成作业环境
+你可以用下面的命令生成作业环境并安装需要的包
 ```
 conda create -n nlp-fall25-assign1 python=3.10
 conda activate nlp-fall25-assign1
+pip install -r requirements.txt
 ```
 
 当你完成Assign1-1.py后，可以在相应目录下运行下述的命令，获得sample_out.md的结果作为输出。通过对比，你可以确定你的代码是否正确实现。
@@ -92,5 +93,5 @@ SID-Assign1/
 |  内容 | 得分 |
 |------------|------|
 | 完全正确 | 100 |
-| 正确完成normalize_doc的每个预处理步骤的调用 | 每个5分 (共35分) |
+| 正确完成normalize_doc的每个预处理步骤的调用 | 每个5分 (共35分 ) |
 | 正确完成所有预处理步骤的函数 | 每个5分(共35分) |
