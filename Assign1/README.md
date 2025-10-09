@@ -3,7 +3,7 @@
 ## 一、作业背景
 古腾堡计划（Project Gutenberg）收录了大量中英文经典书籍的电子化文本，是自然语言处理的重要语料来源。
 
-本次作业要求实现一套文本预处理工具，对从古腾堡计划获取的中英文文本进行标准化处理（如清洗、规范化等），为后续的分词、特征提取等任务奠定基础（参考代码：https://github.com/hqyang/nlp-codes/tree/main/02-tokenization/text_preprocessing.ipynb）。
+本次作业要求实现一套文本预处理工具，对从古腾堡计划获取的中英文文本进行标准化处理（如清洗、规范化等），为后续的分词、特征提取等任务奠定基础（参考代码：[02-tokenization/text_preprocessing.ipynb](https://github.com/hqyang/nlp-codes/tree/main/02-tokenization/text_preprocessing.ipynb)）。
 
 ## 二、作业说明
 ### 1. 数据获取 (已提供)
@@ -58,6 +58,7 @@ nlp-assignments/
     ├── README.md           # 作业说明
     ├── Assign1.py          # 不能改变此文件代码
     ├── Assign1_func.py     # 实现pass对应部分代码
+    ├── prepare_submit.py   # 提交前必须使用，用于检查提交文件是否完全满足要求
     ├── requirements.txt    # 需要的安装包
     ├── sample.json         # 示例配置文件
     ├── sample_out.md       # 示例输出结果
@@ -102,10 +103,17 @@ Tools:
   - (1) To create and check a zip file with your outputs, run python prepare_submit.py path/to/your/output/dir SID, 
   - (2) To check your zip file, run python prepare_submit.py path/to/your/submit/zip/SID-Assign1.zip SID
 
-# 评分标准
+# 作业提交时间与评分标准
+## 截止时间
+- 2025年10月19日(北京时间)23:59
+
+## 评分标准
 |  内容 | 得分 |
 |------------|------|
 | 完全正确 | 100 |
 | 正确完成normalize_doc的每个预处理步骤的调用 | 每个5分 (共35分 ) |
 | 正确完成所有预处理步骤的函数 | 每个5分(共35分) |
-| 每个文件的输出  | 每个10分 (共30分) |
+| 文件的准确输出(out.md)  | 每个10分 (共30分) |
+
+* **注意:** 
+  - 允许3天迟交；往后按每天扣减1%总分
