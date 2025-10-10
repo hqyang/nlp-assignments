@@ -72,9 +72,9 @@ conda activate nlp-fall25-assign1
 pip install -r requirements.txt
 ```
 
-当你完成Assign1-1.py后，可以在相应目录下运行下述的命令，获得sample_out.md的结果作为输出。通过对比，你可以确定你的代码是否正确实现。
+当你完成Assign1.py后，可以在相应目录下运行下述的命令，获得sample_out.md的结果作为输出。通过对比，你可以确定你的代码是否正确实现。
 ```
-python Assign1-1.py sample.json  > sample_out.md
+python Assign1.py sample.json  > sample_out.md
 ```
 
 输出文件sample_out.md的最后部分会显示 (“✅ 所有检查通过”: 说明所有检查已通过)
