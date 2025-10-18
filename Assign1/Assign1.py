@@ -2,7 +2,7 @@
 # @Author: Haiqin Yang
 # @Date:   2025-10-05 18:20:05
 # @Last Modified by:   Haiqin Yang
-# @Last Modified time: 2025-10-07 17:04:14
+# @Last Modified time: 2025-10-18 19:31:42
 
 #!/usr/bin/env python3
 
@@ -12,6 +12,8 @@ import json
 from pathlib import Path  # 用于路径验证
 from Assign1_func import normalize_doc  # 导入预处理函数
 from util import * # 导入需要的函数
+import sys
+sys.stdout.reconfigure(encoding='utf-8')
 
 def main():
     # 解析命令行参数
