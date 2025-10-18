@@ -2,14 +2,12 @@
 # @Author: Haiqin Yang
 # @Date:   2025-10-07 16:51:32
 # @Last Modified by:   Haiqin Yang
-# @Last Modified time: 2025-10-18 19:29:04
+# @Last Modified time: 2025-10-18 19:32:15
 import nltk
 import jieba
 import contractions
 import re
 from pathlib import Path  # 确保已导入
-import sys
-sys.stdout.reconfigure(encoding='utf-8')
 
 def detect_language(text):
     '''
