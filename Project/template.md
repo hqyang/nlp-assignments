@@ -1,7 +1,13 @@
-# 项目报告模板：基于[项目主题]的研究与实现
+# 基于[项目主题]的研究与实现
+## 团队成员及分工 
+| 学号 | 姓名 | 角色 | 任务 |
+| xx | xx | 队长 | 整体方案设计、实验结果分析与论文撰写 |
+| xx | xx | 成员 1 | 数据集预处理（标注清洗、格式转换）、基线模型复现 |
+| xx | xx | 成员 2 | 核心模型开发（Quad 预测模块构建、损失函数设计）、消融实验执行 |
+| xx | xx | 成员 3 | 模型评估（指标计算、结果可视化）、参考文献整理与格式校对 |
 
 ## 摘要  
-本文针对[研究问题，如“深度学习模型的轻量化优化”]，提出了[核心方法，如“基于知识蒸馏的剪枝策略”]。通过[关键实验，如“在CIFAR-10数据集上的对比实验”]验证，所提方法在[指标1，如模型体积]减少[X%]的同时，[指标2，如准确率]保持在[Y%]以上，优于现有方法[方法A]和[方法B]。本文最后总结了研究局限与未来方向。  
+本文针对[研究问题，如“情感四元组(Aspect Sentiment Quad Prediction)预测的优化”]，提出了[核心方法，如“xx”]。通过[关键实验，如“在xx数据集上的对比实验”]验证，所提方法在[指标1，如模型体积]减少[X%]的同时，[指标2，如准确率]保持在[Y%]以上，优于现有方法[方法A]和[方法B]。本文最后总结了研究局限与未来方向。  
 
 
 ## 1. 引言  
@@ -90,22 +96,54 @@ $$
 
 
 ## 5. 结论  
-本文提出[方法名称]，通过[核心创新，如“联合蒸馏与动态剪枝”]实现了模型轻量化。实验表明，该方法在[数据集]上的压缩率和准确率均优于现有方法。未来可进一步探索[方向，如“跨模态模型的适配”]。  
+本文提出[方法名称]，通过[核心创新，如“xxx”]实现了模型xx。实验表明，该方法在[数据集]上的xx率和准确率均优于现有方法。未来可进一步探索[方向，如“xxx”]。  
 
 
 ## 参考文献  
-采用BibTeX格式管理，示例如下（需配合Pandoc或LaTeX工具生成参考文献列表）：  
+采用BibTeX格式管理，示例如下（需配合Pandoc或LaTeX工具生成参考文献列表；可以从[DBLP](www.dblp.org)bibtex拷贝）：  
 ```bibtex
-@article{文献1,
-  title={Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference},
-  author={Jacob, Benoit and Kligys, Skirmantas and Chen, Bo},
-  journal={CVPR},
-  year={2018}
+@article{DBLP:journals/tkde/ZhangWSWTQCWY24,
+  author       = {Weixu Zhang and
+                  Yifei Wang and
+                  Yuanfeng Song and
+                  Victor Junqiu Wei and
+                  Yuxing Tian and
+                  Yiyan Qi and
+                  Jonathan H. Chan and
+                  Raymond Chi{-}Wing Wong and
+                  Haiqin Yang},
+  title        = {Natural Language Interfaces for Tabular Data Querying and Visualization:
+                  {A} Survey},
+  journal      = {{IEEE} Trans. Knowl. Data Eng.},
+  volume       = {36},
+  number       = {11},
+  pages        = {6699--6718},
+  year         = {2024},
+  url          = {https://doi.org/10.1109/TKDE.2024.3400824},
+  doi          = {10.1109/TKDE.2024.3400824},
+  timestamp    = {Tue, 22 Oct 2024 21:09:14 +0200},
+  biburl       = {https://dblp.org/rec/journals/tkde/ZhangWSWTQCWY24.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
 }
 
-@inproceedings{文献2,
-  title={Learning Efficient Convolutional Networks through Network Slimming},
-  author={Liu, Zhuang and Li, Jianguo and Shen, Zhiqiang},
-  booktitle={ICCV},
-  year={2017}
+@inproceedings{DBLP:conf/acl/ZhouYHMY23,
+  author       = {Junxian Zhou and
+                  Haiqin Yang and
+                  Yuxuan He and
+                  Hao Mou and
+                  Junbo Yang},
+  editor       = {Anna Rogers and
+                  Jordan L. Boyd{-}Graber and
+                  Naoaki Okazaki},
+  title        = {A Unified One-Step Solution for Aspect Sentiment Quad Prediction},
+  booktitle    = {Findings of the Association for Computational Linguistics: {ACL} 2023,
+                  Toronto, Canada, July 9-14, 2023},
+  pages        = {12249--12265},
+  publisher    = {Association for Computational Linguistics},
+  year         = {2023},
+  url          = {https://doi.org/10.18653/v1/2023.findings-acl.777},
+  doi          = {10.18653/V1/2023.FINDINGS-ACL.777},
+  timestamp    = {Mon, 03 Mar 2025 20:56:50 +0100},
+  biburl       = {https://dblp.org/rec/conf/acl/ZhouYHMY23.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
 }
