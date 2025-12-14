@@ -48,18 +48,18 @@
 ## 代码结构
 下面是这个repo中主要组件的步骤详解。请注意，有些函数没有完全实现，其中**要实现的**部分将调用`raise NotImplementedError()`。
 
-### (model.py) (model.py)
+### [model.py](model.py)
 这个文件包含一个`BaseModel`类和一个`DanModel`类。以下是要实现的部分：
 —**define_model_parameters()**：定义模型的参数，如嵌入层、前馈层、激活函数（ReLU）等。参见[PyTorch API](https://pytorch.org/docs/stable/nn.html)了解不同的层。
 - **init_model_parameters()**：使用统一的初始化方法初始化模型的参数。参考`Understanding the difficulty of training deep feedforward neural networks - Glorot, X. & Bengio, Y. (2010)`关于Xavier/Glorot的初始化和[more details about initialization in general](https://towardsdatascience.com/weight-initialization-in-neural-networks-a-journey-from-the-basics-to-kaiming-954fb9b47c79).
 - **load_embedding()**： 逐行读取文件，为出现在`vocab`中的单词构建一个词嵌入矩阵（numpy.array）。
 - **copy_embedding_from_numpy**：将词嵌入(numpy.array)复制到PyTorch的嵌入矩阵中。
 
-### (main.py) (main.py)
+### [main.py](main.py)
 这个文件包含学习文本分类器的训练和评估函数。只有一个函数**需要实现**：
 - **pad_sentences()**：给定一个小批量不同长度的句子（即单词id列表的列表）（例如，`[[1,2,5],[3,4],[4,6,8,9]]`表示一个由3个句子组成的小批量，其中它们的单词长度不同`|s_1|=3, |s_2|=2, |s_3|=4`），找到最大的单词序列长度（即`max_seq_length=4`），并将pad id添加到句子的末尾，形成一个大小为`[batch_size, max_seq_length]`的小批量（例如，在本例中`[3,4]`）。
 
-### (vocab.py) (vocab.py)
+### [vocab.py](vocab.py)
 该文件读取标记化的句子列表，并为单词构建词汇表。我们可以重用它来构建标签的词汇表（例如，情感分类任务中的`积极`和`消极`）。
 
 ## 参考文献
