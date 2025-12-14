@@ -9,7 +9,7 @@
 ## 作业细节
 
 重要提示:
-- 下面[Code Structure](## Code Structure)包含详细描述代码内容，包括您需要实现的部分的描述。
+- 下面[代码结构](#代码结构)包含详细描述代码内容，包括您需要实现的部分的描述。
 - 本代码唯一允许的外部库是`numpy`和`pytorch`，不允许其他外部库。由于数据集较小，使用CPU可以在几分钟（<30分钟）内训练出与原始论文中相似大小的DAN模型，同时也鼓励训练可能需要GPU的更高级的模型。请查看可用的资源，如[魔搭](https://www.modelscope.cn/)或[谷歌的Colab](https://colab.research.google.com/)。
 - 我们将使用以下命令（即'run_exp.sh'）运行您的代码，同时使用原始的'main.py'和更新的'model.py'，如果您在那里做了任何修改。因此，请确保您认为最好的设置可以使用以下命令（其中将“CAMPUSID”替换为您的校园ID）：
 
@@ -45,7 +45,7 @@
 工具:
 - `prepare_submit.py`: 可以帮助创建(1)或检查(2)要提交的zip文件。如果格式不符合预期，它将抛出断言错误，作业*不接受未通过此检查的提交*。用法: (1)用你的输出创建并检查一个zip文件，运行`python prepare_submit.py path/to/your/output/dir CAMPUSID`，(2)检查你的zip文件，运行`python3 prepare_submit.py path/to/your/submit/zip/file.zip CAMPUSID`
 
-## Code Structure
+## 代码结构
 下面是这个repo中主要组件的步骤详解。请注意，有些函数没有完全实现，其中**要实现的**部分将调用`raise NotImplementedError()`。
 
 ### (model.py) (model.py)
