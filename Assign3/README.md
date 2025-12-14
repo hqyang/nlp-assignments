@@ -17,8 +17,8 @@
 - `mkdir -p CAMPUSID`
 - `python main.py——train=data/sst-train.txt——dev=data/sst-dev.txt——test=data/sst-test.txt——dev_out=$CAMPUSID/sst-dev-output.txt`
 
--请记住在你自己的`run_exp.sh`中设置默认的超参数设置，因为我们也会通过`bash run_exp.sh`来运行你的实验（没有额外的参数）。
--引用精度：如果你完全按照我们的方式实现，并使用默认的超参数，并使用相同的环境（python 3.8 + numpy 1.21.1 + pytorch 1.10.2），你可能会得到dev=0.3951, test=0.4122的精度。
+- 请记住在你自己的`run_exp.sh`中设置默认的超参数设置，因为我们也会通过`bash run_exp.sh`来运行你的实验（没有额外的参数）。
+- 引用精度：如果你完全按照我们的方式实现，并使用默认的超参数，并使用相同的环境（python 3.8 + numpy 1.21.1 + pytorch 1.10.2），你可能会得到dev=0.3951, test=0.4122的精度。
 
 提交文件应该是一个zip文件，结构如下（假设校园id为‘ CAMPUSID ’）：
 
@@ -50,7 +50,7 @@
 
 ### [model.py](model.py)
 这个文件包含一个`BaseModel`类和一个`DanModel`类。以下是要实现的部分：
-—**define_model_parameters()**：定义模型的参数，如嵌入层、前馈层、激活函数（ReLU）等。参见[PyTorch API](https://pytorch.org/docs/stable/nn.html)了解不同的层。
+— **define_model_parameters()**：定义模型的参数，如嵌入层、前馈层、激活函数（ReLU）等。参见[PyTorch API](https://pytorch.org/docs/stable/nn.html)了解不同的层。
 - **init_model_parameters()**：使用统一的初始化方法初始化模型的参数。参考`Understanding the difficulty of training deep feedforward neural networks - Glorot, X. & Bengio, Y. (2010)`关于Xavier/Glorot的初始化和[more details about initialization in general](https://towardsdatascience.com/weight-initialization-in-neural-networks-a-journey-from-the-basics-to-kaiming-954fb9b47c79).
 - **load_embedding()**： 逐行读取文件，为出现在`vocab`中的单词构建一个词嵌入矩阵（numpy.array）。
 - **copy_embedding_from_numpy**：将词嵌入(numpy.array)复制到PyTorch的嵌入矩阵中。
