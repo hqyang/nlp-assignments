@@ -1,7 +1,7 @@
 # 作业题2：基于神经网络的文本分类器实现
 
 ## 作业说明
-1. **model.py:**需要实现的部分。它使用[PyTorch](https://github.com/pytorch/pytorch)实现了一个非常基本的神经网络模型。提供了一些代码，但不包括重要的功能。请实现[深度平均网络 Deep Averaging Network, DAN](https://www.aclweb.org/anthology/P15-1162.pdf)进行文本分类。你可以任意修改，使它成为一个更好的模型。但是，原始版本的“DanModel”也将被测试，结果将用于评分，所以原始的“DanModel”也必须与你的“model.py”实现一起运行。
+1. **model.py:**需要实现的部分。它使用[PyTorch](https://github.com/pytorch/pytorch)实现了一个非常基本的神经网络模型。提供了一些代码，但不包括重要的功能。请实现[深度平均网络 (Deep Averaging Network, DAN)](https://www.aclweb.org/anthology/P15-1162.pdf)进行文本分类。你可以任意修改，使它成为一个更好的模型。但是，原始版本的“DanModel”也将被测试，结果将用于评分，所以原始的“DanModel”也必须与你的“model.py”实现一起运行。
 2. main.py:**文本分类任务的训练代码。
 3. **setup.py:**这是空白的，但是如果你的分类器实现需要做一些数据下载（例如预训练的词嵌入），你可以在这里实现。它将在运行model.py的实现之前运行。
 4. data/:对应的数据集，来自Stanford Sentiment Treebank，见参考文献。
@@ -10,10 +10,10 @@
 
 重要提示:
 - 下面[Code Structure](#Code Structure)会详细描述代码内容，包括您需要实现的部分的描述。
-- 本代码唯一允许的外部库是'numpy'和'pytorch'，不允许其他外部库。由于数据集较小，使用CPU可以在几分钟（<30分钟）内训练出与原始论文中相似大小的DAN模型，同时也鼓励训练可能需要GPU的更高级的模型。请查看可用的资源，如[谷歌的Colab](https://colab.research.google.com/)。
+- 本代码唯一允许的外部库是'numpy'和'pytorch'，不允许其他外部库。由于数据集较小，使用CPU可以在几分钟（<30分钟）内训练出与原始论文中相似大小的DAN模型，同时也鼓励训练可能需要GPU的更高级的模型。请查看可用的资源，如[魔搭](https://www.modelscope.cn/)或[谷歌的Colab](https://colab.research.google.com/)。
 - 我们将使用以下命令（即'run_exp.sh'）运行您的代码，同时使用原始的'main.py'和更新的'model.py'，如果您在那里做了任何修改。因此，请确保您认为最好的设置可以使用以下命令（其中将“CAMPUSID”替换为您的校园ID）：
 
-— “CAMPUSID = "202xxxxx”
+- “CAMPUSID = "202xxxxx”
 - mkdir -p CAMPUSID
 - 'python main.py——train=data/sst-train.txt——dev=data/sst-dev.txt——test=data/sst-test.txt——dev_out=$CAMPUSID/sst-dev-output.txt'
 
